@@ -1,20 +1,23 @@
 <!-- BEGIN TYPESCRIPT -->
 <script lang="ts">
-    import { Router, Route } from "svelte-routing";
-    import HomeView from "./views/HomeView.svelte";
+    import { Router, Link, Route } from "svelte-routing";
+
+    import Header from "./components/Header.svelte";
+    import SideBar from "./components/SideBar.svelte";
+    import HeroBanner from "./components/HeroBanner.svelte";
 </script>
+
 <!-- END TYPESCRIPT -->
-    
+
 <!-- BEGIN HTML -->
-<div id="svelte">
-    <Router>
-        <Route path="/" component={HomeView}/>
-    </Router>
-</div>
+<Router>
+    <Header />
+    <HeroBanner />
+</Router>
+<!-- END CSS -->
+
 <!-- END HTML -->
-    
+
 <!-- BEGIN CSS -->
 <style>
-    
 </style>
-<!-- END CSS -->
