@@ -5,5 +5,5 @@ export default interface IMedia {
     duration: number;
     year: number;
     genres: string | string[];
-    imgSrc: {horizontal: string, vertical: string};
+    img: {horizontal: string, vertical: string};
 }

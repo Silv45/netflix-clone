@@ -11,7 +11,7 @@
         type: "movie",
         year: 2016,
         genres: ["Musical", "Romance"],
-        imgSrc: { horizontal: "/media/img/horizontal/lalaland.jpg", vertical: "/media/img/vertical/lalaland.jpg" },
+        img: { horizontal: "/media/img/horizontal/lalaland.jpg", vertical: "/media/img/vertical/lalaland.jpg" }
     };
 
     const breakpoints: { [key: string]: number } = {
@@ -30,9 +30,9 @@
         const bottom = document.getElementById("bottom") as HTMLDivElement;
 
         if (window.innerWidth < breakpoints.md) {
-            bottom.style.backgroundImage = media.imgSrc.vertical;
+            bottom.style.backgroundImage = `url('${media.img.vertical}')`;
         } else {
-            bottom.style.backgroundImage = media.imgSrc.horizontal;
+            bottom.style.backgroundImage = `url('${media.img.horizontal}')`;
         }
     }
 
@@ -54,8 +54,10 @@
 
 <!-- BEGIN HTML -->
 <div id="hero-container" class="relative w-full aspect-[4/6] md:aspect-[10/4]">
-    <div id="bottom" class="absolute top-0 left-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat overflow-hidden"></div>
-    <div id="middle" class="absolute top-0 left-0 w-full h-full z-10 bg-black opacity-15 hover:opacity-50 duration-200"></div>
+    <div id="bottom" class="absolute top-0 left-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat overflow-hidden">
+
+    </div>
+    <div id="middle" class="absolute top-0 left-0 w-full h-full z-10 bg-black opacity-25 hover:opacity-50 duration-200"></div>
     <div id="top" class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none grid grid-flow-row p-4">
         <div></div>
         <div id="slider-buttons" class="w-full h-full flex md:px-4 justify-bewteen items-center text-4xl text-neutral-200">
@@ -70,15 +72,23 @@
                 </button>
             </div>
         </div>
-        <div id="movie info">
-            <h2>{media.title}</h2>
-            <p>
+        <div id="movie info" class="text-white flex flex-col justify-center">
+            <h2 class="text-4xl sm:text-6xl md:text-8xl font-semibold mb-4">{media.title}</h2>
+            <p class="mb-2 sm:text-lg">
                 <span>{media.year}</span>
                 &nbsp;|&nbsp;
                 <span>{separateGenres(media.genres)}</span>
                 &nbsp;|&nbsp;
                 <span>{toTextDuration(media.duration)}</span>
             </p>
+            <div id="buttons" class="flex items-center gap-x-8 text-lg text-white">
+                <button class="flex items-center py-3 px-6 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 rounded-lg pointer-events-auto">
+                    VER AHORA
+                </button>
+                <button class="flex items-center py-3 px-6 bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800 rounded-lg pointer-events-auto">
+                    MI LISTA&nbsp;<i class="bi bi-plus flex items-center"></i>
+                </button>
+            </div>
         </div>
     </div>
 </div>
