@@ -1,0 +1,153 @@
+#hero-banner-container {
+    width: 100%;
+    aspect-ratio: 10/4;
+    height: auto;
+    position: relative;
+}
+
+#banner-bottom {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url("../media/img/posters/horizontal/la-la-land.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: 250ms;
+}
+
+#banner-top {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#banner-sliders {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#banner-sliders button i {
+    font-size: 2.5rem;
+}
+#banner-text {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 2rem;
+}
+
+#banner-media-title {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+#banner-media-details {
+    font-size: 1.2rem;
+}
+
+#banner-btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+#my-list {
+    padding: 0.5rem 1.0rem;
+    text-transform: uppercase;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    transition-duration: 150ms;
+    height: fit-content;
+}
+
+#watch-now { 
+    padding: 0.5rem 1.0rem;
+    text-transform: uppercase;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    transition-duration: 150ms;
+    height: fit-content;
+}
+
+#box {
+    padding: 1rem 1.5rem;
+    position: relative;
+    height: fit-content;
+}
+
+.carrousel-container {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 3.0rem;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+#sliders {
+    display: flex;
+    align-items: center;
+    gap: 2.0rem;
+}
+
+#slider-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+#sliders h2 {
+    width: 320px;
+    max-width: 50%;
+    text-overflow: hidden;
+}
+
+.carrousel-wrapper {
+    display: inline-flex;
+    gap: 1.25rem;
+    transition: transform 0.33s ease;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 10;
+}
+
+.carrousel-card-h {
+    height: 160px;
+    width: fit-content;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-duration: 150ms;
+}
+
+.carrousel-card-h:hover {
+    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.carrousel-card-h img {
+    height: 100%;
+    aspect-ratio: 5/3;
+    width: auto;
+}

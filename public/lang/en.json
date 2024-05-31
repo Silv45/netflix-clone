@@ -1,0 +1,42 @@
+{
+    "header": {
+        "movies": "Movies",
+        "series": "Series",
+        "search": "Search..."
+    },
+    "sidebar": {
+        "home": "Home",
+        "list": "My List",
+        "categories": "Categories",
+        "news": "News",
+        "friends": "Friends",
+        "social": "Social",
+        "settings": "Settings",
+        "logout": "Log out"
+    },
+    "footer": {
+        "lang": "Select language",
+        "cookies": "Reset cookies",
+        "navigation": {
+            "navigation": "Navigation",
+            "home": "Home",
+            "faq": "FAQ",
+            "invrel": "Investor Relation",
+            "jobs": "Jobs",
+            "about": "About us",
+            "help": "Help Centre"
+        },
+        "legal": {
+            "legal": "Legal",
+            "privacy": "Privacy Policy",
+            "tos": "Terms of Service",
+            "cookie": "Cookie preferences",
+            "corporate": "Corporate Information"
+        },
+        "talk": {
+            "talk": "Talk to Us",
+            "mail": "support@ercom.com",
+            "phone": "+66 2399 1145"
+        }
+    }
+}
