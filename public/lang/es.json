@@ -1,0 +1,78 @@
+{
+    "header": {
+        "movies": "Películas",
+        "series": "Series",
+        "search": "Búsqueda..."
+    },
+    "sidebar": {
+        "home": "Inicio",
+        "list": "Mi Lista",
+        "categories": "Categorías",
+        "news": "Novedades",
+        "friends": "Amigos",
+        "social": "Social",
+        "settings": "Ajustes",
+        "logout": "Cerrar Sesión"
+    },
+    "footer": {
+        "lang": "Seleccionar lenguaje",
+        "cookies": "Eliminar cookies",
+        "navigation": {
+            "navigation": "Navegación",
+            "home": "Inicio",
+            "faq": "Preguntas frecuentes",
+            "invrel": "Inversionistas",
+            "jobs": "Oportunidades",
+            "about": "Acerca de nosotros",
+            "help": "Centro de ayuda"
+        },
+        "legal": {
+            "legal": "Legal",
+            "privacy": "Políticas de Privacidad",
+            "tos": "Términos de Servicios",
+            "cookie": "Ajustes de Cookies",
+            "corporate": "Información Corporativa"
+        },
+        "talk": {
+            "talk": "Contáctanos",
+            "mail": "support@ercom.com",
+            "phone": "+66 2399 1145"
+        },
+        "follow": "Síguenos"
+    },
+    "home": {
+        "trending": "Tendencias",
+        "recommended": "Recomendadas para ti",
+        "classics": "Clásicas"
+    },
+    "movies": {
+        "movies": "Películas",
+        "action": "Género: Acción",
+        "romance": "Género: Romance",
+        "classics": "Clásicas"
+    },
+    "series": {
+        "series": "Series",
+        "awards": "Premiadas",
+        "same": "Las de siempre",
+        "otaku": "Para los Otaku"
+    },
+    "media": {
+        "media": "Media",
+        "watch": "Ver ahora",
+        "list": "Mi Lista",
+        "synopsis": "Sinopsis",
+        "ratings": "Calificaciones",
+        "genres": "Géneros",
+        "duration": "Duración",
+        "pg": "Clasificación por Edad",
+        "director": "Director",
+        "like": "También te pueden gustar"
+    },
+
+    "404": {
+        "h1": "PÁGINA NO ENCONTRADA",
+        "p": "La página que buscas no pudo ser encontrada",
+        "a": "Teletransportar a Inicio"
+    }
+}

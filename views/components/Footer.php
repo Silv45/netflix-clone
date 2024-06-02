@@ -1,48 +1,50 @@
+<?php $content = json_decode(file_get_contents($_COOKIE["lang"]), true); ?>
 <footer>
     <div>
-        <select name="lang" id="lang">
-            <option value="0" selected disabled hidden>
-                <i class="bi bi-globe-americas"></i>
-                Select language
-            </option>
-            <option value="1">Español</option>
-            <option value="2">English</option>
-            <option value="3">-Otro lenguaje-</option>
-        </select>
+        <form id="set-lang" action="/lang/set" method="post">
+            <select name="lang" id="lang">
+                <option value="0" selected disabled hidden>
+                    <?php echo $content["footer"]["lang"] ?>
+                </option>
+                <option value="1">Español</option>
+                <option value="2">English</option>
+                <option value="3">-Otro lenguaje-</option>
+            </select>
+        </form>
         <button id="rm-cookie">
             <i class="bi bi-cookie"></i>
-            <span>Reset cookies</span>
+            <span><?php echo $content["footer"]["cookies"] ?></span>
         </button>
     </div>
     <div>
-        <h3>NAVIGATION</h3>
+        <h3><?php echo $content["footer"]["navigation"]["navigation"] ?></h3>
         <ul class="footer-columns">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Investor Relation</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Help Centre</a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["home"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["faq"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["invrel"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["jobs"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["about"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["navigation"]["help"] ?></a></li>
         </ul>
     </div>
     <div>
-        <h3>LEGAL</h3>
+        <h3><?php echo $content["footer"]["legal"]["legal"] ?></h3>
         <ul class="footer-columns">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
-            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#"><?php echo $content["footer"]["legal"]["privacy"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["legal"]["tos"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["legal"]["cookie"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["legal"]["corporate"] ?></a></li>
         </ul>
     </div>
     <div>
-        <h3>TALK TO US</h3>
+        <h3><?php echo $content["footer"]["talk"]["talk"] ?></h3>
         <ul class="footer-columns">
-            <li><a href="#">support@ercom.com</a></li>
-            <li><a href="#">+66 2399 1145</a></li>
+            <li><a href="#"><?php echo $content["footer"]["talk"]["mail"] ?></a></li>
+            <li><a href="#"><?php echo $content["footer"]["talk"]["phone"] ?></a></li>
         </ul>
     </div>
     <div>
-        <h3>FOLLOW US</h3>
+        <h3><?php echo $content["footer"]["follow"]?></h3>
         <ul class="socials">
             <li>
                 <a href="#">
@@ -86,7 +88,7 @@
     const select = document.getElementById("lang");
 
     select.addEventListener("change", (event) => {
-        let xhr = new XMLHttpRequest();
-        const lang = event.target.value;
+        const form = document.getElementById("set-lang");
+        form.submit();
     })
 </script>

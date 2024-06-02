@@ -1,91 +1,74 @@
-#hero-banner-container {
+#hero-container {
+    width: 100%;
+}
+
+#hero-wrapper {
     width: 100%;
     aspect-ratio: 10/4;
     height: auto;
     position: relative;
 }
 
-#banner-bottom {
-    height: 100%;
+#hero-banner {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-image: url("../media/img/posters/horizontal/la-la-land.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition-duration: 250ms;
+    height: 100%;
 }
 
-#banner-top {
-    height: 100%;
-    width: 100%;
+.hero-slider {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-#banner-sliders {
-    width: 100%;
-    height: fit-content;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 50%;
     bottom: 50%;
-    display: flex;
-    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 1rem;
+    color: white;
+    opacity: 0.67;
+    cursor: pointer;
+    transition-duration: 150ms;
 }
 
-
-#banner-sliders button i {
-    font-size: 2.5rem;
+.hero-slider:hover {
+    opacity: 1;
 }
-#banner-text {
+
+.hero-slider i {
+    font-size: 2rem;
+}
+
+#hero-prev {
+    left: 1rem;
+}
+
+#hero-next {
+    right: 1rem;
+}
+
+.slide {
     position: absolute;
-    bottom: 20px;
-    margin: 0 2rem;
-}
-
-#banner-media-title {
-    font-size: 4rem;
-    margin: 1rem 0;
-}
-
-#banner-media-details {
-    font-size: 1.2rem;
-}
-
-#banner-btns {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-#my-list {
-    padding: 0.5rem 1.0rem;
-    text-transform: uppercase;
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: center;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    transition-duration: 150ms;
+    inset: 0;
+    width: 100%;
     height: fit-content;
+    opacity: 0;
+    transition-duration: 150ms;
 }
 
-#watch-now { 
-    padding: 0.5rem 1.0rem;
-    text-transform: uppercase;
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: center;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    transition-duration: 150ms;
-    height: fit-content;
+.slide[data-active] {
+    opacity: 1;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 10/4;
+    height: auto;
+    object-fit: cover;
 }
 
 #box {

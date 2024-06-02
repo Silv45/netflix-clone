@@ -1,4 +1,5 @@
     <!-- BEGIN HEADER -->
+    <?php $content = json_decode(file_get_contents($_COOKIE["lang"]), true); ?>
     <header id="website-header">
         <div id="navbar-container">
             <a href="/" id="website-logo">
@@ -8,8 +9,8 @@
                 </h1>
             </a>
             <nav id="header-navbar">
-                <a href="/movies">Películas</a>
-                <a href="/series">Series</a>
+                <a href="/movies"> <?php echo $content["header"]["movies"] ?> </a>
+                <a href="/series"> <?php echo $content["header"]["series"] ?> </a>
             </nav>
         </div>
         <div id="header-items">
@@ -19,7 +20,7 @@
                 </button>
             </div>
             <div id="searchbox">
-                <input type="text" name="search" id="search" placeholder="Búsqueda">
+                <?php echo "<input type=\"text\" name=\"search\" id=\"search\" placeholder=\"". $content["header"]["search"] ."\">" ?>
                 <button type="submit"><i class="bi bi-search"></i></button>
             </div>
             <div id="pfp-container">

@@ -37,6 +37,42 @@
             "talk": "Talk to Us",
             "mail": "support@ercom.com",
             "phone": "+66 2399 1145"
-        }
+        },
+        "follow": "Follow us"
+    },
+    "home": {
+        "trending": "Trending",
+        "recommended": "Recommended for you",
+        "classics": "Classics"
+    },
+    "movies": {
+        "movies": "Movies",
+        "action": "Genre: Action",
+        "romance": "Genre: Romance",
+        "classics": "Classics"
+    },
+    "series": {
+        "series": "Series",
+        "awards": "Award-winning",
+        "same": "Same old",
+        "otaku": "Otaku will love"
+    },
+    "media": {
+        "media": "Media",
+        "watch": "Watch now",
+        "list": "My list",
+        "synopsis": "Synopsis",
+        "ratings": "Ratings",
+        "genres": "Genres",
+        "duration": "Duration",
+        "pg": "PG Rating",
+        "director": "Director",
+        "like": "Things you might like"
+    },
+
+    "404": {
+        "h1": "NOT FOUND",
+        "p": "The page you were looking for could not be found",
+        "a": "Teleport to home"
     }
 }

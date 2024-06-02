@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/css/styles.css">
     <link rel="stylesheet" href="../public/css/global.css">
     <title>Document</title>
 </head>
 
 <body>
+    <?php $content = json_decode(file_get_contents($_COOKIE["lang"]), true); ?>
     <!-- BEGIN HEADER -->
     <?php include("components/Header.php") ?>
     <!-- END HEADER -->
@@ -43,7 +45,7 @@
                             <span id="year">(2016)</span>
                         </h1>
                         <p id="synopsis">
-                            <span>SINOPSIS:</span>
+                            <span><?php echo $content["media"]["synopsis"] ?>:</span>
                             <br>
                             <span id="synopsis-text">While stuck in Los Angeles traffic, jazz pianist Sebastian "Seb"
                                 Wilder has a moment of road rage directed at aspiring actress Mia Dolan. After a hard
@@ -56,16 +58,16 @@
                     <div id="ratings-container">
                         <div id="buttons">
                             <button id="watch-now">
-                                VER AHORA
+                            <?php echo $content["media"]["watch"] ?>
                             </button>
                             <button id="my-list">
                                 <i class="bi bi-plus"></i>
-                                MI LISTA
+                                <?php echo $content["media"]["list"] ?>
                             </button>
                         </div>
                         <div id="ratings">
                             <div class="row">
-                                <h2>Calificación</h2>
+                                <h2><?php echo $content["media"]["ratings"] ?></h2>
                                 <img height="20" src="../public/media/img/svg/imdb.svg" alt="imdb logo">
                                 <p>
                                     <span id="relative-rating">8.0</span>
@@ -74,28 +76,28 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <h2>Géneros</h2>
+                                <h2><?php echo $content["media"]["ratings"] ?></h2>
                                 <p id="genres">
                                     comedia, drama, romance, música
                                 </p>
                             </div>
                             <hr>
                             <div class="row">
-                                <h2>Duración</h2>
+                                <h2><?php echo $content["media"]["duration"] ?></h2>
                                 <p id="duration">
                                     2h 8m
                                 </p>
                             </div>
                             <hr>
                             <div class="row">
-                                <h2>Clasificación por edades</h2>
+                                <h2><?php echo $content["media"]["pg"] ?></h2>
                                 <p id="pg-rating">
                                     PG-13
                                 </p>
                             </div>
                             <hr>
                             <div class="row">
-                                <h2>Director</h2>
+                                <h2><?php echo $content["media"]["director"] ?></h2>
                                 <p id="director">
                                     Damien Chazelle
                                 </p>
@@ -106,7 +108,7 @@
             </div>
             <div id="carrousel-container-1" class="carrousel-contianer">
                 <div id="sliders">
-                    <h2>Qué más te podría interesar</h2>
+                    <h2><?php echo $content["media"]["like"] ?></h2>
                     <div id="slider-buttons">
                         <button id="prev-1">
                             <i class="bi bi-caret-left-fill"></i>

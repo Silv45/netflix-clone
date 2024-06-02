@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/css/styles.css"> 
     <link rel="stylesheet" href="../public/css/global.css">
     <title>Document</title>
 </head>
 
 <body>
     <!-- BEGIN HEADER -->
+    <?php $content = json_decode(file_get_contents($_COOKIE["lang"]), true); ?>
     <?php include("components/Header.php") ?>
     <!-- END HEADER -->
     <!-- BEGIN MAIN PAGE CONTENT -->
@@ -21,10 +23,10 @@
         <!-- BEGIN DYNAMIC CONTENT -->
         <main id="main-content">
             <div id="movie-list-box">
-                <h1 class="page-header">Series</h1>
+                <h1 class="page-header"><?php echo $content["series"]["series"] ?></h1>
                 <div id="carrousel-container-1" class="carrousel-contianer">
                     <div id="sliders">
-                        <h2>Premiadas</h2>
+                        <h2><?php echo $content["series"]["awards"] ?></h2>
                         <div id="slider-buttons">
                             <button id="prev-1">
                                 <i class="bi bi-caret-left-fill"></i>
@@ -61,7 +63,7 @@
             </div>
             <div id="carrousel-container-2" class="carrousel-contianer">
                 <div id="sliders">
-                    <h2>Las de siempre</h2>
+                    <h2><?php echo $content["series"]["same"] ?></h2>
                     <div id="slider-buttons">
                         <button id="prev-2">
                             <i class="bi bi-caret-left-fill"></i>
@@ -97,7 +99,7 @@
             </div>
             <div id="carrousel-container-3" class="carrousel-contianer">
                 <div id="sliders">
-                    <h2>Para los otaku</h2>
+                    <h2><?php echo $content["series"]["otaku"] ?></h2>
                     <div id="slider-buttons">
                         <button id="prev-3">
                             <i class="bi bi-caret-left-fill"></i>
@@ -134,12 +136,6 @@
         </main>
         <!-- END DYNAMIC CONTENT -->
     </div>
-    <style>
-        #movie-list-box {
-            width: 100%;
-            padding: 0 1rem;
-        }
-    </style>
     <!-- END MAIN PAGE CONTENT -->
 
     

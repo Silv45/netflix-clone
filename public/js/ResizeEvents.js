@@ -16,8 +16,6 @@ function resizeEvents() {
     const navbar = document.getElementById("header-navbar");
     const searchbox = document.getElementById("search");
 
-    // content.style.width = window.innerWidth - parseFloat(window.getComputedStyle(document.getElementById("sidebar")).getPropertyValue("width").replace("px", "")) + "px";
-
     if (window.innerWidth < breakpoints.md) {
         navbar.style.display = "none";
     } else {

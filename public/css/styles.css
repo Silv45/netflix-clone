@@ -184,6 +184,7 @@ a:hover {
     display: grid;
     grid-auto-flow: row;
     row-gap: 2.5rem;
+    z-index: 20;
 }
 
 .sidebar-navlink {
@@ -260,3 +261,33 @@ footer {
     font-size: 1rem;
 }
 /*END FOOTER STYLES*/
+
+/*BEGIN NOT FOUND STYLES*/
+#not-found {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#not-found :not(h1) {
+    font-size: 1.25rem;
+}
+
+#not-found hr {
+    width: 60%;
+}
+
+#tp {
+    color: lightskyblue;
+    
+}
+
+#tp:hover {
+    text-decoration: underline;
+}
+/*END NOT FOUND STYLES*/
